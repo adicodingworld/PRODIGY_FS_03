@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SparcleStore</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="#order-tracking">Order Tracking</a>
+                <a href="#customer-support">Customer Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div id="checkout-section">
+                <h3>Checkout</h3>
+                <form id="checkout-form">
+                    <h4>Shipping Information</h4>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                    
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                    
+                    <label for="zip">ZIP Code:</label>
+                    <input type="text" id="zip" name="zip" required>
+                    
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                    
+                    <h4>Payment Method</h4>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment" value="upi" required> UPI
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="credit-card" required> Credit Card
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="paypal" required> PayPal
+                        </label>
+                    </div>
+                    
+                    <button type="submit" id="submit-order">Submit Order</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+      <footer>
+        <p>&copy; 2024 SparcleStore</p>
+        <div class="footer-credits">- by Aditya Kalaskar</div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

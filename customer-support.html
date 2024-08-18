@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for Customer Support Page */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .faq h2 {
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            display: none;
+            margin: 10px 0 0;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        .support-info {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SparcleStore</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="order-tracking.html">Order Tracking</a>
+                <a href="customer-support.html">Customer Support</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Customer Support</h1>
+        
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        
+        <!-- Frequently Asked Questions (FAQs) -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I return a product?</h3>
+                <p>To return a product, please visit our Returns page and follow the instructions provided.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept various payment methods including credit/debit cards, PayPal, and more. For a full list, please check our Payments page.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I track my order?</h3>
+                <p>You can track your order by visiting our Order Tracking page and entering your order details.</p>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </section>
+        
+        <!-- Support Information -->
+        <section class="support-info">
+            <h2>Support Information</h2>
+            <p>If you have any issues or questions, feel free to reach out to us:</p>
+            <p>Email: support@SparcleStore.com</p>
+            <p>Phone: +91-XXXXXXXXXX</p>
+            <p>Support Hours: Mon-Fri, 9 AM - 6 PM</p>
+        </section>
+    </main>
+      <footer>
+        <p>&copy; 2024 SparcleStore</p>
+        <div class="footer-credits">- by Aditya Kalaskar</div>
+    </footer>
+
+    <script>
+        // JavaScript for FAQs
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.querySelector('h3').addEventListener('click', function() {
+                    item.classList.toggle('active');
+                });
+            });
+        });
+
+        // JavaScript for Contact Form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add contact form submission logic here
+            alert('Your message has been sent successfully!');
+            this.reset(); // Clear the form after submission
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for Order Tracking Page */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .tracking-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .tracking-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .tracking-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .tracking-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .tracking-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .order-status {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SparcleStore</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="order-tracking.html">Order Tracking</a>
+                <a href="customer-support.html">Customer Support</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Order Tracking</h1>
+        <section class="tracking-form">
+            <form id="tracking-form">
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order-id" required>
+                <button type="submit">Track Order</button>
+            </form>
+        </section>
+        <section id="order-status" class="order-status">
+            <!-- Order status will be displayed here -->
+        </section>
+    </main>
+      <footer>
+        <p>&copy; 2024 SparcleStore</p>
+        <div class="footer-credits">- by Aditya Kalaskar</div>
+    </footer>
+    <script src="order-tracking.js"></script>
+</body>
+</html>

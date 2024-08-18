@@ -1,0 +1,483 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f0f4c3, #a5d6a7);
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff4081, #ffab40);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background: #e0f7fa;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 22%;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #f1f8e9;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #4caf50;
+}
+
+.product-card .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4081;
+    margin: 5px 0;
+}
+
+.product-card .product-description {
+    font-size: 16px;
+    color: #757575;
+    margin: 10px 0;
+}
+
+.product-card .view-detail {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff4081, #ffab40);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-card .view-detail:hover {
+    background: linear-gradient(45deg, #ffab40, #ff4081);
+    transform: scale(1.05);
+}
+
+/* Image Styles */
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjusted for better visibility */
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Product Detail Page Styles */
+#product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    padding: 20px;
+    background: #f1f8e9;
+}
+
+#product-detail .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Product Detail Page Image */
+#product-detail .product-image {
+    max-height: 350px; /* Larger size for the product detail page */
+    width: auto;
+    margin-bottom: 30px;
+}
+
+/* Product Details */
+.product-details {
+    margin-top: 20px;
+}
+
+.product-details h2 {
+    font-size: 26px;
+    margin: 10px 0;
+    color: #4caf50;
+}
+
+.product-details .product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081;
+    margin: 5px 0;
+}
+
+.product-details .product-description {
+    font-size: 18px;
+    color: #757575;
+    margin: 15px 0;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Add to Cart Button */
+#add-to-cart {
+    display: inline-block;
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+#add-to-cart:hover {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    transform: scale(1.05);
+}
+
+/* User Reviews Section */
+#user-reviews {
+    margin-top: 20px;
+}
+
+#reviews-list {
+    margin-top: 10px;
+}
+
+.review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.review:hover {
+    border-color: #ff4081;
+    background-color: #f1f8e9;
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #ff4081;
+}
+
+.review-text {
+    margin-top: 5px;
+}
+
+/* Star Rating Styles */
+.star {
+    font-size: 30px;
+    color: white;
+    margin: 0 3px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.star:hover,
+.star.active {
+    color: #ff9800;
+}
+
+/* Review Form Styles */
+#review-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+#review-form textarea {
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff4081, #ffab40);
+    color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cart Page Styles */
+#cart {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+}
+
+#cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4caf50;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ff4081;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    color: #757575;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+#checkout-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#checkout-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+#checkout-form input,
+#checkout-form textarea,
+#checkout-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#checkout-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #checkout-form {
+        padding: 10px;
+    }
+}
+
+
+
+/* Star Rating Styles */
+.star-rating {
+    display: inline-flex;
+    direction: ltr; /* Ensure stars are displayed from left to right */
+    font-size: 30px;
+}
+
+.star {
+    color: pink; /* Default star color */
+    margin: 0 3px;
+    transition: color 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Change color of stars on hover */
+.star:hover,
+.star.hover {
+    color: #ff9800; /* Highlighted star color */
+}
+
+/* Color of stars when active/selected */
+.star.selected {
+    color: #ff9800; /* Selected star color */
+}
+
+
+
+/* General styles for the form */
+#checkout-form {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Styles for the radio button options */
+.payment-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Improve spacing and alignment of radio buttons */
+.payment-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Button styling */
+#submit-order {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit-order:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* General styles for the form */
+#checkout-form {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Styles for the radio button options */
+.payment-options {
+    margin-top: 0.5cm; /* Move the entire section 0.5cm down */
+}
+
+/* Adjust individual radio button labels if needed */
+.payment-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Improve spacing and alignment of radio buttons */
+.payment-options input[type="radio"] {
+    margin-right: 10px;
+    margin-top: 0.5cm; /* Move radio buttons 0.5cm down */
+}
+
+/* Button styling */
+#submit-order {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit-order:hover {
+    background-color: #0056b3;
+}
+
+
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+.footer-credits {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 15px;
+    color: #333;
+}

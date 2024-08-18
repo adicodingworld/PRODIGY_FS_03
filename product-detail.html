@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Local Store</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="order-tracking.html">Order Tracking</a>
+                <a href="customer-support.html">Customer Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-detail">
+            <div class="product-info">
+                <img id="product-image" src="" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h2 id="product-title"></h2>
+                    <p id="product-price"></p>
+                    <p id="product-description"></p>
+                    <button id="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- User Reviews Section -->
+            <section id="user-reviews">
+                <h3>User Reviews</h3>
+                <div id="reviews-list"></div>
+
+                <h4>Leave a Review</h4>
+                <form id="review-form">
+                    <div id="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="rating" name="rating" value="">
+                    <br>
+                    <label for="review-text">Review:</label>
+                    <textarea id="review-text" name="review-text" rows="4" cols="50"></textarea>
+                    <br>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Local Store</p>
+    </footer>
+
+    <script src="product-detail.js"></script>
+</body>
+</html>
